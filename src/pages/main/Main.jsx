@@ -9,7 +9,7 @@ function Main() {
             <div className="Main">
                 <div className="mainTitle">
                     <h1>
-                        Эксклюзивно от астрозажигалки Юлии Рыж
+                        Эксклюзивно от астрозажигалки Юлии Рыж!
                     </h1>
                 </div>
 
