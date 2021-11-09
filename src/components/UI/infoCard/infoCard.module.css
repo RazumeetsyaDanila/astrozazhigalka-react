@@ -1,0 +1,16 @@
+.container{
+    display: flex;
+    justify-content: center;
+    background-color: #a2d2ff;
+    width: 250px;
+    height: 150px;
+    margin: 12px;
+}
+
+.title{
+
+}
+
+.description{
+
+}
