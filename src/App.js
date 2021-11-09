@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import {BrowserRouter, Route, Routes ,Link} from "react-router-dom";
+import Main from "./pages/main/Main";
+import NatalAnalysis from "./pages/natal_analysis/NatalAnalysis";
+import Solar from "./pages/solar/Solar";
+import ImageCode from "./pages/image_code/ImageCode";
+import NatalChild from "./pages/natal_child/NatalChild";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Main/>} />
+                <Route path="/natal_analysis" element={<NatalAnalysis/>} />
+                <Route path="/solar" element={<Solar/>} />
+                <Route path="/image_code" element={<ImageCode/>} />
+                <Route path="/natal_child" element={<NatalChild/>} />
+            </Routes>
+        </BrowserRouter>
+    );
 }
 
 export default App;

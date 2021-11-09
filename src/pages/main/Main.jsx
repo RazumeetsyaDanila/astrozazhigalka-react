@@ -1,7 +1,7 @@
 import React from 'react'
-import '../styles/Main.css'
-import InfoCard from "../components/UI/infoCard/InfoCard";
-import TestCard from "../components/UI/testCard/TestCard";
+import '../../styles/Main.css'
+import InfoCard from "../../components/UI/infoCard/InfoCard";
+import TestCard from "../../components/UI/testCard/TestCard";
 
 function Main() {
     return (
@@ -27,12 +27,12 @@ function Main() {
                     <InfoCard
                         title={"Код к имиджу:"}
                         description={"Как слышать “ДА” в ответ на все свои предложения"}
-                        path={"code"}
+                        path={"image_code"}
                     />
                     <InfoCard
                         title={"Натальная карта вашего ребенка:"}
                         description={"Зажигаем жизнь ребенка"}
-                        path={"test"}
+                        path={"natal_child"}
                     />
                 </div>
                 <div className="testcards">

@@ -1,19 +1,21 @@
 import React from 'react';
-import classes from './Card.module.css'
+import classes from './infoCard.module.css'
+import {Link} from "react-router-dom";
 
-const Card = ({title, description}) => {
+const InfoCard = ({title, description, path}) => {
     return (
-        <div className={classes.container}>
+        <Link to={"/"+path} className={classes.container}>
+
             <div className={classes.title}>
-                <p>{title}</p>
+                <h2>{title}</h2>
             </div>
 
             <div className={classes.description}>
                 <p>{description}</p>
             </div>
 
-        </div>
+        </Link>
     );
 };
 
-export default Card;
+export default InfoCard;

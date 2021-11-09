@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f8f9fa;
+}
+
+.Main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.infocards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 16vw 0 16vw;
+}
+
+.testcards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.mainTitle{
+    text-align: center;
+    font-size: 26px;
+    width: 100vw;
+    margin-bottom: 40px;
+    font-family: 'Neucha', cursive;
+}
+
+
+@media (max-width: 1200px) {
+    .Main{
+        justify-content: start;
+    }
+
+    .infocards{
+        margin: 0;
+    }
+
+}
