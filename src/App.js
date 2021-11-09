@@ -5,6 +5,7 @@ import NatalAnalysis from "./pages/natal_analysis/NatalAnalysis";
 import Solar from "./pages/solar/Solar";
 import ImageCode from "./pages/image_code/ImageCode";
 import NatalChild from "./pages/natal_child/NatalChild";
+import './styles/app.css'
 
 function App() {
     return (
