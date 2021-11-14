@@ -81,9 +81,24 @@ const Rectification = () => {
                 <hr/>
                 <p>{rectification_questions[1]}</p>
                 <div style={{display: "flex"}}>
-                    <input ref={(e) => radioRefs.current.push(e)} type="radio" name="a1" value={'младший'}/>Да
-                    <input ref={(e) => radioRefs.current.push(e)} type="radio" name="a1" value={'не младший'}/>Нет
-                    <input ref={(e) => radioRefs.current.push(e)} type="radio" name="a1" value={'единственный'}/>Я единственный
+                    {/*<input ref={(e) => radioRefs.current.push(e)} type="radio" name="a1" value={'младший'}/>Да*/}
+                    {/*<input ref={(e) => radioRefs.current.push(e)} type="radio" name="a1" value={'не младший'}/>Нет*/}
+                    {/*<input ref={(e) => radioRefs.current.push(e)} type="radio" name="a1" value={'единственный'}/>Я единственный*/}
+
+                    <div className={classes.form_radio_btn}>
+                        <input className={classes.form_radio_btn} ref={(e) => radioRefs.current.push(e)} type="radio" name="a1" value={'младший'} id={'radio-1'}/>
+                        <label htmlFor="radio-1"> Да </label>
+                    </div>
+
+                    <div className={classes.form_radio_btn}>
+                        <input className={classes.form_radio_btn} ref={(e) => radioRefs.current.push(e)} type="radio" name="a1" value={'не младший'} id={'radio-2'}/>
+                        <label htmlFor="radio-2"> Нет </label>
+                    </div>
+
+                    <div className={classes.form_radio_btn}>
+                        <input className={classes.form_radio_btn} ref={(e) => radioRefs.current.push(e)} type="radio" name="a1" value={'единственный'} id={'radio-3'}/>
+                        <label htmlFor="radio-3"> Единственный </label>
+                    </div>
                 </div>
             </div>
 
