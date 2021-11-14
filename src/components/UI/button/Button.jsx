@@ -1,9 +1,12 @@
 import React from 'react';
+import classes from './button.module.css'
 
-const Button = (props) => {
+const Button = ({func, text}) => {
     return (
-        <div>
-
+        <div className={classes.container} onClick={func}>
+            <p className={classes.text}>
+                {text}
+            </p>
         </div>
     );
 };

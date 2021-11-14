@@ -1,0 +1,17 @@
+.container{
+    background-color: #adb5bd;
+    padding: 10px 14px 10px 14px;
+    text-decoration: none;
+    color: black;
+    font-family: 'Scada', sans-serif;
+    font-size: 18px;
+    border-radius: 4px;
+    -moz-user-select: none;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.container:hover{
+    background-color: #6c757d;
+    color: #adb5bd;
+}
