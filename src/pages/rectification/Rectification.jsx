@@ -6,63 +6,71 @@ import {rectification_questions} from '../../questions/rectification_questions'
 import AgeQuestion from "../../components/ageQuestion/AgeQuestion";
 import DeathQuestion from "../../components/deathQuestion/DeathQuestion";
 import Button from "../../components/UI/button/Button";
+import Modal from "../../components/UI/modal/Modal";
 
 const Rectification = () => {
     let radioRefs = useRef([])
     let refs = useRef([])
     let answers = []
     let doneFullAnswers = []
+    const [modal, setModal] = useState(false)
+
+    const [state, setState] = useState([])
+
 
     let questions_2_7 = []
-    for (let i = 2; i <= 7; i++){
+    for (let i = 2; i <= 7; i++) {
         questions_2_7.push({question: rectification_questions[i]})
     }
     let questions_8_11 = []
-    for (let i = 8; i <= 11; i++){
+    for (let i = 8; i <= 11; i++) {
         questions_8_11.push({question: rectification_questions[i]})
     }
     let questions_12_21 = []
-    for (let i = 12; i <= 21; i++){
+    for (let i = 12; i <= 21; i++) {
         questions_12_21.push({question: rectification_questions[i]})
     }
 
     let getAnswers = () => {
         answers = []
         doneFullAnswers = []
-        answers.push(getCheckedRadio(radioRefs.current) ? getCheckedRadio(radioRefs.current).value : radioRefs.current[2].value)
+        answers.push(getCheckedRadio(radioRefs.current.filter(e => e !== null)) ? getCheckedRadio(radioRefs.current).value : 'единственный')
 
-        for(let i = 0; i < 20; i++){
+        for (let i = 0; i < 20; i++) {
             if (refs.current[i].value) answers.push(refs.current[i].value)
             else answers.push('')
         }
         let fullAnswers = [];
-        fullAnswers.push("Я "+answers[0]+" ребенок в семье.");
-        fullAnswers.push("Мне было "+answers[1]+", когда умерла бабушка по папе.");
-        fullAnswers.push("Мне было "+answers[2]+", когда умерла бабушка по маме.");
-        fullAnswers.push("Мне было "+answers[3]+", когда умер дедушка по папе.");
-        fullAnswers.push("Мне было "+answers[4]+", когда умер дедушка по маме.");
-        fullAnswers.push("Мне было "+answers[5]+", когда умерла мама.");
-        fullAnswers.push("Мне было "+answers[6]+", когда умер папа.");
-        fullAnswers.push("От рака умер/ла "+answers[7]+".");
-        fullAnswers.push("Внезапно умер/ла "+answers[8]+".");
-        fullAnswers.push("В чрезвычайной ситуации умер/ла "+answers[9]+".");
-        fullAnswers.push("От инсульта умер/ла "+answers[10]+".");
-        fullAnswers.push("Мне было "+answers[11]+", когда я тонул/а.");
-        fullAnswers.push("Мне было "+answers[12]+", когда у меня были переломы.");
-        fullAnswers.push("Мне было "+answers[13]+", когда случилась авария.");
-        fullAnswers.push("Мне было "+answers[14]+", когда у меня были переезды.");
-        fullAnswers.push("Мне было "+answers[15]+", когда у меня случались пожары.");
-        fullAnswers.push("Мне было "+answers[16]+", когда у меня были нападения.");
-        fullAnswers.push("Мне было "+answers[17]+", когда у меня были операции.");
-        fullAnswers.push("Мне было "+answers[18]+", когда у меня были разводы.");
-        fullAnswers.push("Мне было "+answers[19]+", когда купили квартиру.");
-        fullAnswers.push("Мне было "+answers[20]+", когда я потерял/а крупную сумму денег.");
+        fullAnswers.push("Я " + answers[0] + " ребенок в семье.");
+        fullAnswers.push("Мне было " + answers[1] + ", когда умерла бабушка по папе.");
+        fullAnswers.push("Мне было " + answers[2] + ", когда умерла бабушка по маме.");
+        fullAnswers.push("Мне было " + answers[3] + ", когда умер дедушка по папе.");
+        fullAnswers.push("Мне было " + answers[4] + ", когда умер дедушка по маме.");
+        fullAnswers.push("Мне было " + answers[5] + ", когда умерла мама.");
+        fullAnswers.push("Мне было " + answers[6] + ", когда умер папа.");
+        fullAnswers.push("От рака умер/ла " + answers[7] + ".");
+        fullAnswers.push("Внезапно умер/ла " + answers[8] + ".");
+        fullAnswers.push("В чрезвычайной ситуации умер/ла " + answers[9] + ".");
+        fullAnswers.push("От инсульта умер/ла " + answers[10] + ".");
+        fullAnswers.push("Мне было " + answers[11] + ", когда я тонул/а.");
+        fullAnswers.push("Мне было " + answers[12] + ", когда у меня были переломы.");
+        fullAnswers.push("Мне было " + answers[13] + ", когда случилась авария.");
+        fullAnswers.push("Мне было " + answers[14] + ", когда у меня были переезды.");
+        fullAnswers.push("Мне было " + answers[15] + ", когда у меня случались пожары.");
+        fullAnswers.push("Мне было " + answers[16] + ", когда у меня были нападения.");
+        fullAnswers.push("Мне было " + answers[17] + ", когда у меня были операции.");
+        fullAnswers.push("Мне было " + answers[18] + ", когда у меня были разводы.");
+        fullAnswers.push("Мне было " + answers[19] + ", когда купили квартиру.");
+        fullAnswers.push("Мне было " + answers[20] + ", когда я потерял/а крупную сумму денег.");
 
-        for(let i = 0; i < 21; i++){
-            if(answers[i]) doneFullAnswers.push(fullAnswers[i])
+        for (let i = 0; i < 21; i++) {
+            if (answers[i]) doneFullAnswers.push(fullAnswers[i])
         }
 
+        setState(doneFullAnswers)
+        // console.log(state)
         console.log(doneFullAnswers)
+        setModal(true)
     }
 
 
@@ -86,17 +94,20 @@ const Rectification = () => {
                     {/*<input ref={(e) => radioRefs.current.push(e)} type="radio" name="a1" value={'единственный'}/>Я единственный*/}
 
                     <div className={classes.form_radio_btn}>
-                        <input className={classes.form_radio_btn} ref={(e) => radioRefs.current.push(e)} type="radio" name="a1" value={'младший'} id={'radio-1'}/>
+                        <input className={classes.form_radio_btn} ref={(e) => radioRefs.current.push(e)} type="radio"
+                               name="a1" value={'младший'} id={'radio-1'}/>
                         <label htmlFor="radio-1"> Да </label>
                     </div>
 
                     <div className={classes.form_radio_btn}>
-                        <input className={classes.form_radio_btn} ref={(e) => radioRefs.current.push(e)} type="radio" name="a1" value={'не младший'} id={'radio-2'}/>
+                        <input className={classes.form_radio_btn} ref={(e) => radioRefs.current.push(e)} type="radio"
+                               name="a1" value={'не младший'} id={'radio-2'}/>
                         <label htmlFor="radio-2"> Нет </label>
                     </div>
 
                     <div className={classes.form_radio_btn}>
-                        <input className={classes.form_radio_btn} ref={(e) => radioRefs.current.push(e)} type="radio" name="a1" value={'единственный'} id={'radio-3'}/>
+                        <input className={classes.form_radio_btn} ref={(e) => radioRefs.current.push(e)} type="radio"
+                               name="a1" value={'единственный'} id={'radio-3'}/>
                         <label htmlFor="radio-3"> Единственный </label>
                     </div>
                 </div>
@@ -108,19 +119,20 @@ const Rectification = () => {
 
             {questions_2_7.map(item => (
                 <div className={classes.ageQuestionBox}>
-                    <p>Вопрос {questions_2_7.indexOf(item)+2}</p>
+                    <p>Вопрос {questions_2_7.indexOf(item) + 2}</p>
                     <hr/>
                     <p>{item.question}</p>
 
                     <div>
-                        <p>Когда мне было <input ref={(e) => refs.current.push(e)} type="text" placeholder="?"/> лет. </p>
+                        <p>Когда мне было <input ref={(e) => refs.current.push(e)} type="text" placeholder="?"/> лет.
+                        </p>
                     </div>
                 </div>
             ))}
 
             {questions_8_11.map(item => (
                 <div className={classes.deathQuestionBox}>
-                    <p>Вопрос {questions_8_11.indexOf(item)+8}</p>
+                    <p>Вопрос {questions_8_11.indexOf(item) + 8}</p>
                     <hr/>
                     <p>{item.question}</p>
 
@@ -132,18 +144,33 @@ const Rectification = () => {
 
             {questions_12_21.map(item => (
                 <div className={classes.ageQuestionBox}>
-                    <p>Вопрос {questions_12_21.indexOf(item)+12}</p>
+                    <p>Вопрос {questions_12_21.indexOf(item) + 12}</p>
                     <hr/>
                     <p>{item.question}</p>
 
                     <div>
-                        <p>Когда мне было <input ref={(e) => refs.current.push(e)} type="text" placeholder="?"/> лет. </p>
+                        <p>Когда мне было <input ref={(e) => refs.current.push(e)} type="text" placeholder="?"/> лет.
+                        </p>
                     </div>
                 </div>
             ))}
 
+
+
             <Button func={getAnswers} text={'Показать результат'}/>
 
+            <Modal visible={modal} setVisible={setModal}>
+                <div>
+                    {
+                        state.map(item => (
+                            <div style={{textAlign: 'center', fontFamily: "'Scada', sans-serif", paddingBottom: 10}}>
+                                {item}<br/>
+                            </div>
+                        ))
+                    }
+                    <Button func={() => setModal(false)} text={'OK'}/>
+                </div>
+            </Modal>
         </div>
     );
 };
