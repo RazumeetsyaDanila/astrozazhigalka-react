@@ -8,6 +8,9 @@ import AgeQuestion from "../../components/ageQuestion/AgeQuestion";
 import DeathQuestion from "../../components/deathQuestion/DeathQuestion";
 import Button from "../../components/UI/button/Button";
 import Modal from "../../components/UI/modal/Modal";
+import $ from "jquery";
+import instaImg from "../../img/instagram(min).png";
+import closeImg from "../../img/close.png";
 
 const Rectification = () => {
     let radioRefs = useRef([])
@@ -69,9 +72,20 @@ const Rectification = () => {
         }
 
         setState(doneFullAnswers)
-        // console.log(state)
-        console.log(doneFullAnswers)
         setModal(true)
+    }
+
+
+    const copy_in_buffer = (el) => {
+        let $tmp = $("<textarea>");
+        $("body").append($tmp);
+        $tmp.val($(el).text()).select();
+        document.execCommand("copy");
+        $tmp.remove();
+    }
+
+    const copy = () => {
+        copy_in_buffer('#result')
     }
 
 
@@ -79,13 +93,13 @@ const Rectification = () => {
         <div className={classes.container}>
             {/*<img className={classes.image} src={photo1} alt=""/>*/}
 
-            <div className={classes.title}>
+            <div className={classes.title} id={'test2'}>
                 <h1>
                     Уточнение времени рождения (Ректификация)
                 </h1>
             </div>
 
-            <div className={classes.questionBox}>
+            <div className={classes.questionBox} >
                 <p>Вопрос 1</p>
                 <hr/>
                 <p>{rectification_questions[1]}</p>
@@ -162,14 +176,32 @@ const Rectification = () => {
 
             <Modal visible={modal} setVisible={setModal}>
                 <div>
-                    {
-                        state.map(item => (
-                            <div style={{textAlign: 'center', fontFamily: "'Scada', sans-serif", paddingBottom: 10}}>
-                                {item}<br/>
-                            </div>
-                        ))
-                    }
-                    <Button func={() => setModal(false)} text={'OK'}/>
+                    <div className={classes.closeBtn}>
+                        <img src={closeImg} alt="" onClick={() => {setModal(false)}}/>
+                    </div>
+
+                    <div className={classes.copyArea}>
+
+                        <div id={'result'}>
+                            <p style={{textAlign: 'center', fontFamily: "'Neucha', cursive", fontSize: 24, marginBottom: 10}}>Результат: {'\n'}</p>
+                            {
+                                state.map(item => (
+                                    <p style={{textAlign: 'center', fontFamily: "'Scada', sans-serif", paddingBottom: 6}}>
+                                        {item + '\n'}
+                                    </p>
+                                ))
+                            }
+                        </div>
+                        <Button func={copy} text={'Копировать результат'}/>
+                    </div>
+
+
+                    <div className={classes.insta}>
+                        <a href="https://www.instagram.com/mat_rizg/">
+                            <img src={instaImg} alt="Перейти в инстаграм"/>
+                        </a>
+                        <p>Перейти в инстаграм, чтобы отправить результат</p>
+                    </div>
                 </div>
             </Modal>
         </div>
@@ -177,3 +209,5 @@ const Rectification = () => {
 };
 
 export default Rectification;
+
+

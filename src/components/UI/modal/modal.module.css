@@ -13,11 +13,24 @@
     padding: 20px;
     background-color: white;
     border-radius: 4px;
-    max-width: 90vw;
+    max-width: 95vw;
+    position: relative;
 }
 
 .modal.active{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (max-height: 700px) {
+    .modalContent{
+        font-size: 12px;
+    }
+}
+
+@media (min-height: 700px) and (max-height: 900px) {
+    .modalContent{
+        font-size: 14px;
+    }
 }

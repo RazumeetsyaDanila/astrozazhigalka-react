@@ -66,6 +66,41 @@ input[type=radio]{
     border-radius: 4px;
 }
 
+.insta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Scada', sans-serif;
+}
+
+.insta img{
+    width: 28px;
+    height: 28px;
+}
+
+
+.copyArea{
+    border: 1px solid #adb5bd;
+    border-radius: 4px;
+    margin: 6px 6px 20px 6px;
+}
+
+.copyArea > div{
+    padding: 8px;
+}
+
+.closeBtn{
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    cursor: pointer;
+
+}
+
+.test{
+    position: relative;
+}
+
 /*------------- Стиль радио-кнопок -------------------*/
 
 .form_radio_btn {
