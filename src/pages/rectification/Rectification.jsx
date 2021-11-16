@@ -183,10 +183,10 @@ const Rectification = () => {
                     <div className={classes.copyArea}>
 
                         <div id={'result'}>
-                            <p style={{textAlign: 'center', fontFamily: "'Neucha', cursive", fontSize: 24, marginBottom: 10}}>Результат: {'\n'}</p>
+                            <p style={{textAlign: 'center', fontFamily: "'Neucha', cursive", fontSize: 24, marginBottom: 4}}>Результат: {'\n'}</p>
                             {
                                 state.map(item => (
-                                    <p style={{textAlign: 'center', fontFamily: "'Scada', sans-serif", paddingBottom: 6}}>
+                                    <p style={{textAlign: 'center', fontFamily: "'Scada', sans-serif", paddingBottom: 4}}>
                                         {item + '\n'}
                                     </p>
                                 ))

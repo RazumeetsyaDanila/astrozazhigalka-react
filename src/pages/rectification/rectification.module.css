@@ -82,11 +82,11 @@ input[type=radio]{
 .copyArea{
     border: 1px solid #adb5bd;
     border-radius: 4px;
-    margin: 6px 6px 20px 6px;
+    margin: 6px 6px 14px 6px;
 }
 
 .copyArea > div{
-    padding: 8px;
+    padding: 6px;
 }
 
 .closeBtn{
