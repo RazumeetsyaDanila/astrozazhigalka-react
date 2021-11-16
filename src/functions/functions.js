@@ -1,3 +1,4 @@
+
 export default function getCheckedRadio(radio_group) {
     //Обходим весь список радиокнопок
     for (var i = 0; i < radio_group.length; i++) {
@@ -9,4 +10,12 @@ export default function getCheckedRadio(radio_group) {
     }
     //Ни одна не отмечена
     return undefined;
+}
+
+export default function copy_in_buffer(el) {
+    var $tmp = $("<textarea>");
+    $("body").append($tmp);
+    $tmp.val($(el).text()).select();
+    document.execCommand("copy");
+    $tmp.remove();
 }

@@ -2,6 +2,7 @@ import React, {useRef, useState} from 'react';
 import classes from './rectification.module.css'
 import photo1 from '../../img/1photo(new).jpg'
 import getCheckedRadio from '../../functions/functions'
+import copy_in_buffer from '../../functions/functions'
 import {rectification_questions} from '../../questions/rectification_questions'
 import AgeQuestion from "../../components/ageQuestion/AgeQuestion";
 import DeathQuestion from "../../components/deathQuestion/DeathQuestion";
