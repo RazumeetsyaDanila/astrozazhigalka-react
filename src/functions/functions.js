@@ -1,4 +1,3 @@
-import $ from 'jquery'
 
 export default function getCheckedRadio(radio_group) {
     //Обходим весь список радиокнопок
@@ -12,13 +11,4 @@ export default function getCheckedRadio(radio_group) {
     //Ни одна не отмечена
     return undefined;
 }
-
-export const copy_in_buffer = (el) => {
-    let $tmp = $("<textarea>");
-    $("body").append($tmp);
-    $tmp.val($(el).text()).select();
-    document.execCommand("copy");
-    $tmp.remove();
-}
-
 

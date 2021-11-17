@@ -2,7 +2,6 @@ import React, {useRef, useState} from 'react';
 import classes from './rectification.module.css'
 import photo1 from '../../img/1photo(new).jpg'
 import getCheckedRadio from '../../functions/functions'
-import copy_in_buffer from '../../functions/functions'
 import {rectification_questions} from '../../questions/rectification_questions'
 import AgeQuestion from "../../components/ageQuestion/AgeQuestion";
 import DeathQuestion from "../../components/deathQuestion/DeathQuestion";
@@ -11,6 +10,7 @@ import Modal from "../../components/UI/modal/Modal";
 import $ from "jquery";
 import instaImg from "../../img/instagram(min).png";
 import closeImg from "../../img/close.png";
+import LinkBtn from "../../components/UI/linkBtn/LinkBtn";
 
 const Rectification = () => {
     let radioRefs = useRef([])
@@ -20,6 +20,8 @@ const Rectification = () => {
     const [modal, setModal] = useState(false)
 
     const [state, setState] = useState([])
+
+    const [copyBtnText, setCopyBtnText] = useState('Копировать результат')
 
 
     let questions_2_7 = []
@@ -73,8 +75,8 @@ const Rectification = () => {
 
         setState(doneFullAnswers)
         setModal(true)
+        setCopyBtnText('Копировать результат')
     }
-
 
     const copy_in_buffer = (el) => {
         let $tmp = $("<textarea>");
@@ -86,11 +88,13 @@ const Rectification = () => {
 
     const copy = () => {
         copy_in_buffer('#result')
+        setCopyBtnText('Результат скопирован!')
     }
 
 
     return (
         <div className={classes.container}>
+
             {/*<img className={classes.image} src={photo1} alt=""/>*/}
 
             <div className={classes.title} id={'test2'}>
@@ -99,7 +103,7 @@ const Rectification = () => {
                 </h1>
             </div>
 
-            <div className={classes.questionBox} >
+            <div className={classes.questionBox}>
                 <p>Вопрос 1</p>
                 <hr/>
                 <p>{rectification_questions[1]}</p>
@@ -170,29 +174,44 @@ const Rectification = () => {
                 </div>
             ))}
 
+            {/*<div style={{display: 'flex'}}>*/}
+            {/*    <Button func={getAnswers} text={'Показать результат'} />*/}
+            {/*    <Button func={() => document.location.href = '/'} text={'Назад'} style={{marginLeft: 4}}/>*/}
+            {/*</div>*/}
 
-
-            <Button func={getAnswers} text={'Показать результат'}/>
+            <Button func={getAnswers} text={'Показать результат'} />
+            <LinkBtn text={'Выход'} path={''} style={{marginTop: 10, borderRadius: 2}}/>
 
             <Modal visible={modal} setVisible={setModal}>
                 <div>
                     <div className={classes.closeBtn}>
-                        <img src={closeImg} alt="" onClick={() => {setModal(false)}}/>
+                        <img src={closeImg} alt="" onClick={() => {
+                            setModal(false)
+                        }}/>
                     </div>
 
                     <div className={classes.copyArea}>
 
                         <div id={'result'}>
-                            <p style={{textAlign: 'center', fontFamily: "'Neucha', cursive", fontSize: 24, marginBottom: 4}}>Результат: {'\n'}</p>
+                            <p style={{
+                                textAlign: 'center',
+                                fontFamily: "'Neucha', cursive",
+                                fontSize: 24,
+                                marginBottom: 4
+                            }}>Результат: {'\n'}</p>
                             {
                                 state.map(item => (
-                                    <p style={{textAlign: 'center', fontFamily: "'Scada', sans-serif", paddingBottom: 4}}>
+                                    <p style={{
+                                        textAlign: 'center',
+                                        fontFamily: "'Scada', sans-serif",
+                                        paddingBottom: 4
+                                    }}>
                                         {item + '\n'}
                                     </p>
                                 ))
                             }
                         </div>
-                        <Button func={copy} text={'Копировать результат'}/>
+                        <Button func={copy} text={copyBtnText}/>
                     </div>
 
 

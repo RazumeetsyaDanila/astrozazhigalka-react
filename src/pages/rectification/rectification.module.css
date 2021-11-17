@@ -31,7 +31,9 @@ input[type=radio]{
     justify-content: center;
     margin-top: 20px;
     margin-bottom: 20px;
+    position: relative;
 }
+
 
 .title{
     text-align: center;
