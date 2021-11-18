@@ -49,7 +49,7 @@ const NatalAnalysis = () => {
                 <p>Инстаграм</p>
             </div>
 
-            <LinkBtn text={"Назад"} path={""}/>
+            {/*<LinkBtn text={"Назад"} path={""}/>*/}
         </div>
     );
 };

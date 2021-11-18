@@ -95,7 +95,7 @@ const Rectification = () => {
     return (
         <div className={classes.container}>
 
-            {/*<img className={classes.image} src={photo1} alt=""/>*/}
+            <img className={classes.image} src={photo1} alt=""/>
 
             <div className={classes.title} id={'test2'}>
                 <h1>
@@ -180,7 +180,11 @@ const Rectification = () => {
             {/*</div>*/}
 
             <Button func={getAnswers} text={'Показать результат'} />
-            <LinkBtn text={'Выход'} path={''} style={{marginTop: 10, borderRadius: 2}}/>
+            {/*<LinkBtn text={'Назад'} path={''} style={{marginTop: 10, borderRadius: 2}}/>*/}
+
+            <div className={classes.backLine}>
+
+            </div>
 
             <Modal visible={modal} setVisible={setModal}>
                 <div>
