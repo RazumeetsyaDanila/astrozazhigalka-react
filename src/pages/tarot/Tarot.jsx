@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import classes from './tarot.module.css'
 import {characteristic_of_a_man, self_characteristic} from '../../questions/tarot_questions'
 import Radio from "../../components/UI/radio/Radio";
@@ -9,7 +9,10 @@ import Modal from "../../components/UI/modal/Modal";
 import $ from "jquery";
 
 const Tarot = () => {
-    window.scrollTo(0, 0)
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     const [answer1, setAnswer1] = useState('')
     const [answer2, setAnswer2] = useState('')

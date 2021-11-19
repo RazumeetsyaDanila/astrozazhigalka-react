@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import classes from './rectification.module.css'
 import photo1 from '../../img/1photo(new).jpg'
 import getCheckedRadio from '../../functions/functions'
@@ -14,7 +14,11 @@ import LinkBtn from "../../components/UI/linkBtn/LinkBtn";
 import Radio from "../../components/UI/radio/Radio";
 
 const Rectification = () => {
-    window.scrollTo(0, 0)
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     let radioRefs = useRef([])
     let refs = useRef([])
     let answers = []

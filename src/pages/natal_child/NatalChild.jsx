@@ -5,7 +5,6 @@ import instaImg from "../../img/instagram(min).png"
 import {BrowserRouter, Route, Routes ,Link} from "react-router-dom";
 
 const NatalChild = () => {
-    window.scrollTo(0, 0)
     return (
         <div className={classes.container}>
             <div className={classes.title}>
