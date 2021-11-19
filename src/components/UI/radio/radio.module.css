@@ -1,7 +1,8 @@
 /*------------- Стиль радио-кнопок -------------------*/
+
 .form_radio_btn {
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 0px;
 }
 
 .form_radio_btn input[type=radio] {

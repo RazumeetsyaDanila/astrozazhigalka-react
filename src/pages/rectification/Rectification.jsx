@@ -112,8 +112,8 @@ const Rectification = () => {
                 <hr/>
                 <p>{rectification_questions[1]}</p>
                 <div style={{display: "flex"}}>
-                    <Radio label={'Да'} id={'r1'} group={'a1'} onClick={() => setAnswer1('младший')}/>
-                    <Radio label={'Нет'} id={'r2'} group={'a1'} onClick={() => setAnswer1('не младший')}/>
+                    <Radio label={'Да'} id={'r1'} group={'a1'} onClick={() => setAnswer1('младший')} blockStyle={{marginRight: 10}}/>
+                    <Radio label={'Нет'} id={'r2'} group={'a1'} onClick={() => setAnswer1('не младший')} blockStyle={{marginRight: 10}}/>
                     <Radio label={'Единственный'} id={'r3'} group={'a1'} onClick={() => setAnswer1('единственный')}/>
                 </div>
             </div>
@@ -168,9 +168,6 @@ const Rectification = () => {
             <Button func={getAnswers} text={'Показать результат'} />
             {/*<LinkBtn text={'Назад'} path={''} style={{marginTop: 10, borderRadius: 2}}/>*/}
 
-            <div className={classes.backLine}>
-
-            </div>
 
             <Modal visible={modal} setVisible={setModal}>
                 <div>
