@@ -11,6 +11,7 @@ import $ from "jquery";
 import instaImg from "../../img/instagram(min).png";
 import closeImg from "../../img/close.png";
 import LinkBtn from "../../components/UI/linkBtn/LinkBtn";
+import Radio from "../../components/UI/radio/Radio";
 
 const Rectification = () => {
     let radioRefs = useRef([])
@@ -22,6 +23,8 @@ const Rectification = () => {
     const [state, setState] = useState([])
 
     const [copyBtnText, setCopyBtnText] = useState('Копировать результат')
+
+    const [answer1, setAnswer1] = useState('единственный')
 
 
     let questions_2_7 = []
@@ -40,7 +43,8 @@ const Rectification = () => {
     let getAnswers = () => {
         answers = []
         doneFullAnswers = []
-        answers.push(getCheckedRadio(radioRefs.current.filter(e => e !== null)) ? getCheckedRadio(radioRefs.current).value : 'единственный')
+        // answers.push(getCheckedRadio(radioRefs.current.filter(e => e !== null)) ? getCheckedRadio(radioRefs.current).value : 'единственный')
+        answers.push(answer1)
 
         for (let i = 0; i < 20; i++) {
             if (refs.current[i].value) answers.push(refs.current[i].value)
@@ -108,27 +112,9 @@ const Rectification = () => {
                 <hr/>
                 <p>{rectification_questions[1]}</p>
                 <div style={{display: "flex"}}>
-                    {/*<input ref={(e) => radioRefs.current.push(e)} type="radio" name="a1" value={'младший'}/>Да*/}
-                    {/*<input ref={(e) => radioRefs.current.push(e)} type="radio" name="a1" value={'не младший'}/>Нет*/}
-                    {/*<input ref={(e) => radioRefs.current.push(e)} type="radio" name="a1" value={'единственный'}/>Я единственный*/}
-
-                    <div className={classes.form_radio_btn}>
-                        <input className={classes.form_radio_btn} ref={(e) => radioRefs.current.push(e)} type="radio"
-                               name="a1" value={'младший'} id={'radio-1'}/>
-                        <label htmlFor="radio-1"> Да </label>
-                    </div>
-
-                    <div className={classes.form_radio_btn}>
-                        <input className={classes.form_radio_btn} ref={(e) => radioRefs.current.push(e)} type="radio"
-                               name="a1" value={'не младший'} id={'radio-2'}/>
-                        <label htmlFor="radio-2"> Нет </label>
-                    </div>
-
-                    <div className={classes.form_radio_btn}>
-                        <input className={classes.form_radio_btn} ref={(e) => radioRefs.current.push(e)} type="radio"
-                               name="a1" value={'единственный'} id={'radio-3'}/>
-                        <label htmlFor="radio-3"> Единственный </label>
-                    </div>
+                    <Radio label={'Да'} id={'r1'} group={'a1'} onClick={() => setAnswer1('младший')}/>
+                    <Radio label={'Нет'} id={'r2'} group={'a1'} onClick={() => setAnswer1('не младший')}/>
+                    <Radio label={'Единственный'} id={'r3'} group={'a1'} onClick={() => setAnswer1('единственный')}/>
                 </div>
             </div>
 
