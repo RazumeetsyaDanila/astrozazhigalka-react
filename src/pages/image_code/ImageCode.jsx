@@ -4,6 +4,7 @@ import LinkBtn from "../../components/UI/linkBtn/LinkBtn";
 import instaImg from "../../img/instagram(min).png";
 
 const ImageCode = () => {
+    window.scrollTo(0, 0)
     return (
         <div className={classes.container}>
             <div className={classes.title}>

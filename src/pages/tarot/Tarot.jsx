@@ -9,6 +9,7 @@ import Modal from "../../components/UI/modal/Modal";
 import $ from "jquery";
 
 const Tarot = () => {
+    window.scrollTo(0, 0)
 
     const [answer1, setAnswer1] = useState('')
     const [answer2, setAnswer2] = useState('')
@@ -20,8 +21,6 @@ const Tarot = () => {
     const [copyBtnText, setCopyBtnText] = useState('Копировать результат')
 
     const [state, setState] = useState([])
-
-
 
     const getAnswers = () => {
         const doneAnswers = []

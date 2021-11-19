@@ -14,6 +14,7 @@ import LinkBtn from "../../components/UI/linkBtn/LinkBtn";
 import Radio from "../../components/UI/radio/Radio";
 
 const Rectification = () => {
+    window.scrollTo(0, 0)
     let radioRefs = useRef([])
     let refs = useRef([])
     let answers = []
