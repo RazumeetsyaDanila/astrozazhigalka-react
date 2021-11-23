@@ -78,7 +78,7 @@ const Solar = () => {
                     <strong>Что от вас нужно: </strong>Обратиться ко мне хотя бы за 4-2 недели до дня рождения. Оптимально сделать это заранее, чтобы подготовиться. Затем важно следовать инструкциям и личным проработкам.
                 </p>
             </div>
-            <h2 style={{fontFamily: 'Scada, sansSerif', margin: 24, textAlign: 'center'}}>
+            <h2 style={{fontFamily: 'Scada, sansSerif', margin: 24, textAlign: 'center', color: '#ee46a9'}}>
                 Чтобы узнать цену, обращайтесь ко мне в личных сообщениях.
             </h2>
 
@@ -86,7 +86,7 @@ const Solar = () => {
                 <a href="https://www.instagram.com/mat_rizg/">
                     <img src={instaImg} alt="Перейти в инстаграм"/>
                 </a>
-                <p>Инстаграм</p>
+                <p style={{color: '#ee46a9'}}>Инстаграм</p>
             </div>
 
             {/*<LinkBtn text={"Назад"} path={""}/>*/}

@@ -25,8 +25,8 @@ const SunTest = ({questions, setAnswers, visible, sunNext, sunBack}) => {
             }
 
             <div style={{display: 'flex', width: 100, justifyContent: 'space-between'}}>
-                <img src={back} alt="" onClick={sunBack}/>
-                <img src={next} alt="" onClick={sunNext}/>
+                <img src={back} alt="" onClick={sunBack} className={classes.btn}/>
+                <img src={next} alt="" onClick={sunNext} className={classes.btn}/>
             </div>
 
         </div>

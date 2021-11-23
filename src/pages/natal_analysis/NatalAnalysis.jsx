@@ -41,7 +41,7 @@ const NatalAnalysis = () => {
                     Гарантирую поддержку, благодаря которой наша работа пройдёт эффективно и приятно. Тебе не придётся “ломать” себя, ты будешь обучаться любить своё внутреннее “Я” правильно. А я стану твоим астронаставником.
             </div>
 
-            <h2 style={{fontFamily: 'Scada, sansSerif', margin: 24, textAlign: 'center'}}>
+            <h2 style={{fontFamily: 'Scada, sansSerif', margin: 24, textAlign: 'center', color: '#ee46a9'}}>
                 Время зажигать в душе звезды!
             </h2>
 
@@ -49,7 +49,7 @@ const NatalAnalysis = () => {
                 <a href="https://www.instagram.com/mat_rizg/">
                     <img src={instaImg} alt="Перейти в инстаграм"/>
                 </a>
-                <p>Инстаграм</p>
+                <p style={{color: '#ee46a9'}}>Инстаграм</p>
             </div>
 
             {/*<LinkBtn text={"Назад"} path={""}/>*/}

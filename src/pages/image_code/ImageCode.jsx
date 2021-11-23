@@ -73,7 +73,7 @@ const ImageCode = () => {
                 </p>
             </div>
 
-            <h2 style={{fontFamily: 'Scada, sansSerif', margin: 24, textAlign: 'center'}}>
+            <h2 style={{fontFamily: 'Scada, sansSerif', margin: 24, textAlign: 'center', color: '#ee46a9'}}>
                 Ну, что? Поехали? Чтобы узнать стоимость напиши мне в личку.
             </h2>
 
@@ -81,7 +81,7 @@ const ImageCode = () => {
                 <a href="https://www.instagram.com/mat_rizg/">
                     <img src={instaImg} alt="Перейти в инстаграм"/>
                 </a>
-                <p>Инстаграм</p>
+                <p style={{color: '#ee46a9'}}>Инстаграм</p>
             </div>
 
             {/*<LinkBtn text={"Назад"} path={""}/>*/}

@@ -24,8 +24,8 @@ const VenusTest = ({questions, setAnswers, visible, venusNext, venusBack}) => {
             }
 
             <div style={{display: 'flex', width: 100, justifyContent: 'space-between'}}>
-                <img src={back} alt="" onClick={venusBack}/>
-                <img src={next} alt="" onClick={venusNext}/>
+                <img src={back} alt="" onClick={venusBack} className={classes.btn}/>
+                <img src={next} alt="" onClick={venusNext} className={classes.btn}/>
             </div>
 
         </div>

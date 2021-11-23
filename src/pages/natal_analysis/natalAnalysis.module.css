@@ -4,6 +4,7 @@
     align-items: center;
     height: 100vh;
     justify-content: center;
+    color: white;
 
 }
 
@@ -13,10 +14,11 @@
     width: 100vw;
     margin-bottom: 40px;
     font-family: 'Neucha', cursive;
+    color: #ee46a9;
 }
 
 .box{
-    background-color: #dee2e6;
+    background-color: #00001d;
     width: 40vw;
     padding: 20px;
     font-family: 'Scada', sans-serif;

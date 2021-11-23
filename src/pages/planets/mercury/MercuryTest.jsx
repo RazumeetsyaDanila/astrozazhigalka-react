@@ -24,8 +24,8 @@ const MercuryTest = ({questions, setAnswers, visible, mercuryNext, mercuryBack})
             }
 
             <div style={{display: 'flex', width: 100, justifyContent: 'space-between'}}>
-                <img src={back} alt="" onClick={mercuryBack}/>
-                <img src={next} alt="" onClick={mercuryNext}/>
+                <img src={back} alt="" onClick={mercuryBack} className={classes.btn}/>
+                <img src={next} alt="" onClick={mercuryNext} className={classes.btn}/>
             </div>
 
         </div>

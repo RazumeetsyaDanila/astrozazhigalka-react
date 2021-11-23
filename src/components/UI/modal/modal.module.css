@@ -5,13 +5,13 @@
     right: 0;
     left: 0;
     display: none;
-    background: rgba(0,0,0, 0.5);
+    background: rgba(0,0,0, 0.8);
 
 }
 
 .modalContent{
     padding: 20px;
-    background-color: white;
+    background-color: #090f2a;
     border-radius: 4px;
     max-width: 95vw;
     position: relative;

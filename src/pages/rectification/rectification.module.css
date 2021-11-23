@@ -1,5 +1,6 @@
 hr{
     width: 100px;
+    color: #ee46a9;
 }
 
 input[type=text]{
@@ -15,7 +16,7 @@ input[type=text]{
 
 /* Добавляет затемнение при заполнении формы*/
 input[type=text]:focus{
-    background-color: #c3c3c9;
+    background-color: #e589c2;
     outline: none;
 }
 
@@ -32,6 +33,7 @@ input[type=radio]{
     margin-top: 20px;
     margin-bottom: 20px;
     position: relative;
+    color: white;
 }
 
 
@@ -40,10 +42,11 @@ input[type=radio]{
     font-size: 18px;
     margin-bottom: 18px;
     font-family: 'Neucha', cursive;
+    color: #ee46a9
 }
 
 .questionBox, .ageQuestionBox, .deathQuestionBox{
-    background-color: #dee2e6;
+    background-color: #00001d;
     width: 30vw;
     padding: 12px;
     font-family: 'Scada', sans-serif;
@@ -64,7 +67,7 @@ input[type=radio]{
 }
 
 .image{
-    border: 4px  solid #6c757d;
+    border: 4px  solid #ee46a9;
     border-radius: 4px;
 }
 
@@ -76,13 +79,13 @@ input[type=radio]{
 }
 
 .insta img{
-    width: 28px;
-    height: 28px;
+    width: 30px;
+    height: 30px;
 }
 
 
 .copyArea{
-    border: 1px solid #adb5bd;
+    border: 1px solid #ee46a9;
     border-radius: 4px;
     margin: 6px 6px 14px 6px;
 }
@@ -103,37 +106,6 @@ input[type=radio]{
     position: relative;
 }
 
-/*------------- Стиль радио-кнопок -------------------*/
-
-.form_radio_btn {
-    display: inline-block;
-    margin-right: 10px;
-}
-
-.form_radio_btn input[type=radio] {
-    display: none;
-}
-
-.form_radio_btn label {
-    display: inline-block;
-    cursor: pointer;
-    padding: 0px 15px;
-    line-height: 34px;
-    border: 1px solid #999;
-    border-radius: 6px;
-    user-select: none;
-    color: #999;
-}
-
-.form_radio_btn input[type=radio]:checked + label {
-    /*background: #999;*/
-    border: 1px solid #000;
-    color: black;
-}
-
-.form_radio_btn label:hover {
-    color: #666;
-}
 
 
 @media (max-width: 800px) {

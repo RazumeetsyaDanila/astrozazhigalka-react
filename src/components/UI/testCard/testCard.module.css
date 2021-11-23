@@ -2,13 +2,13 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: #dee2e6;
+    background-color: #00001d;
     width: 320px;
     height: 290px;
     margin: 10px;
     border-radius: 4px;
     text-decoration: none;
-    border: 2px solid #6c757d;
+    /*border: 2px solid black;*/
 }
 
 .container:hover{
@@ -19,16 +19,16 @@
 .title{
     padding: 16px 0 0 0;
     font-family: 'Comfortaa', cursive;
-    color: black;
+    color: #ee46a9;
     text-align: center;
     height: 54px;
 }
 
 .description{
-    color: black;
+    color: #ffffff;
     font-family: 'Scada', sans-serif;
     text-align: center;
-    padding: 14px;
+    padding: 16px;
     display: flex;
     height: 100%;
     align-items: center;

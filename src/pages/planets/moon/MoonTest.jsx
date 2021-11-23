@@ -24,7 +24,7 @@ const MoonTest = ({questions, setAnswers, visible, moonNext}) => {
                 ))
             }
 
-            <img src={next} alt="" onClick={moonNext}/>
+            <img src={next} alt="" onClick={moonNext} className={classes.btn}/>
 
         </div>
     );

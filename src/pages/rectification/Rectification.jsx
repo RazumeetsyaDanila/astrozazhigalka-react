@@ -1,16 +1,12 @@
 import React, {useEffect, useRef, useState} from 'react';
 import classes from './rectification.module.css'
 import photo1 from '../../img/1photo(new).jpg'
-import getCheckedRadio from '../../functions/functions'
 import {rectification_questions} from '../../questions/rectification_questions'
-import AgeQuestion from "../../components/ageQuestion/AgeQuestion";
-import DeathQuestion from "../../components/deathQuestion/DeathQuestion";
 import Button from "../../components/UI/button/Button";
 import Modal from "../../components/UI/modal/Modal";
 import $ from "jquery";
 import instaImg from "../../img/instagram(min).png";
 import closeImg from "../../img/close.png";
-import LinkBtn from "../../components/UI/linkBtn/LinkBtn";
 import Radio from "../../components/UI/radio/Radio";
 
 const Rectification = () => {

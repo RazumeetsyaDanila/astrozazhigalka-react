@@ -24,7 +24,7 @@ const JupiterTest = ({questions, setAnswers, visible, jupiterBack, result}) => {
                 ))
             }
 
-            <img src={back} alt="" onClick={jupiterBack} style={{marginBottom: 20}}/>
+            <img src={back} alt="" onClick={jupiterBack} style={{marginBottom: 20}} className={classes.btn}/>
             <Button func={result} text={'Показать результат'}/>
 
         </div>

@@ -17,14 +17,17 @@
     font-size: 18px;
     margin: 10px 0 16px 0;
     font-family: 'Neucha', cursive;
+    color: #ee46a9;
 }
 
 .image{
-    border: 4px  solid #6c757d;
+    border: 4px  solid #ee46a9;
     border-radius: 4px;
 }
 
-
+.btn:hover{
+    cursor: pointer;
+}
 
 @media (max-width: 800px) {
     .questionBox, .ageQuestionBox, .deathQuestionBox{

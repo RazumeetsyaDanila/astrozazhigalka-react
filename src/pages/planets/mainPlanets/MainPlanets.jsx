@@ -161,14 +161,6 @@ const MainPlanets = () => {
 
     return (
         <div className={classes.container}>
-            {/*<Button text={'Moon'} func={() => setMoonTestVisible(!moonTestVisible)} style={{marginTop: 10}}/>*/}
-            {/*<Button text={'Sun'} func={() => setSunTestVisible(!sunTestVisible)} style={{marginTop: 10}}/>*/}
-            {/*<Button text={'Saturn'} func={() => setSaturnTestVisible(!saturnTestVisible)} style={{marginTop: 10}}/>*/}
-            {/*<Button text={'Venus'} func={() => setVenusTestVisible(!venusTestVisible)} style={{marginTop: 10}}/>*/}
-            {/*<Button text={'Mercury'} func={() => setMercuryTestVisible(!mercuryTestVisible)} style={{marginTop: 10}}/>*/}
-            {/*<Button text={'Mars'} func={() => setMarsTestVisible(!marsTestVisible)} style={{marginTop: 10}}/>*/}
-            {/*<Button text={'Jupiter'} func={() => setJupiterTestVisible(!jupiterTestVisible)} style={{marginTop: 10}}/>*/}
-
             <MoonTest questions={question.slice(0, 20)} visible={moonTestVisible} setAnswers={setMoonAnswers} moonNext={moonNext}/>
             <SunTest questions={question.slice(20, 40)} visible={sunTestVisible} setAnswers={setSunAnswers} sunNext={sunNext} sunBack={sunBack}/>
             <SaturnTest questions={question.slice(40, 60)} visible={saturnTestVisible} setAnswers={setSaturnAnswers} saturnNext={saturnNext} saturnBack={saturnBack}/>
@@ -178,9 +170,6 @@ const MainPlanets = () => {
             <MarsTest questions={question.slice(100, 120)} visible={marsTestVisible} setAnswers={setMarsAnswers} marsNext={marsNext} marsBack={marsBack}/>
             <JupiterTest questions={question.slice(120, 140)} visible={jupiterTestVisible}
                          setAnswers={setJupiterAnswers} jupiterBack={jupiterBack} result={result}/>
-
-            {/*<Button text={'Посчитать результат'} func={result} />*/}
-
             <Modal visible={modal} setVisible={setModal}>
                 <div>
                     <div className={classes.closeBtn}>

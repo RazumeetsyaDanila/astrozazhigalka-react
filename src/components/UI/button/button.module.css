@@ -1,8 +1,8 @@
 .container{
-    background-color: #adb5bd;
+    background-color: #ee46a9;
     padding: 10px 14px 10px 14px;
     text-decoration: none;
-    color: black;
+    /*color: #ee46a9;*/
     font-family: 'Scada', sans-serif;
     font-size: 18px;
     border-radius: 2px;
@@ -14,6 +14,6 @@
 }
 
 .container:hover{
-    background-color: #6c757d;
-    color: #adb5bd;
+    background-color: rgb(255, 94, 188);
+    color: #090f2a;
 }

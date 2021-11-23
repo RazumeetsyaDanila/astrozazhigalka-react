@@ -24,8 +24,8 @@ const MarsTest = ({questions, setAnswers, visible, marsNext, marsBack}) => {
             }
 
             <div style={{display: 'flex', width: 100, justifyContent: 'space-between'}}>
-                <img src={back} alt="" onClick={marsBack}/>
-                <img src={next} alt="" onClick={marsNext}/>
+                <img src={back} alt="" onClick={marsBack} className={classes.btn}/>
+                <img src={next} alt="" onClick={marsNext} className={classes.btn}/>
             </div>
 
         </div>

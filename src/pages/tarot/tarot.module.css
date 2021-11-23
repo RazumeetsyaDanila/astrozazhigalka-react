@@ -11,6 +11,7 @@
     margin-top: 20px;
     margin-bottom: 20px;
     /*position: relative;*/
+    color: white;
 }
 
 .title{
@@ -18,10 +19,11 @@
     font-size: 18px;
     margin-bottom: 18px;
     font-family: 'Neucha', cursive;
+    color: #ee46a9;
 }
 
 .questionBox{
-    background-color: #dee2e6;
+    background-color: #00001d;
     width: 30vw;
     padding: 12px;
     font-family: 'Scada', sans-serif;
@@ -40,16 +42,16 @@
     display: flex;
     justify-content: center;
     font-size: 18px;
-    color: #999999;
+    color: #ffffff;
     text-align: center;
 }
 
 .checkBoxContainer .checkBox:checked + label{
-    color: black;
+    color: #ee46a9;
 }
 
 .checkBoxContainer label:hover{
-    color: #666;
+    color: #e589c2;
     cursor: pointer;
 }
 
@@ -67,7 +69,7 @@
 
 
 .copyArea{
-    border: 1px solid #adb5bd;
+    border: 1px solid #ee46a9;
     border-radius: 4px;
     margin: 6px 6px 14px 6px;
 }

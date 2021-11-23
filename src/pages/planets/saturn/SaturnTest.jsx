@@ -25,8 +25,8 @@ const SaturnTest = ({questions, setAnswers, visible, saturnNext, saturnBack}) =>
             }
 
             <div style={{display: 'flex', width: 100, justifyContent: 'space-between'}}>
-                <img src={back} alt="" onClick={saturnBack}/>
-                <img src={next} alt="" onClick={saturnNext}/>
+                <img src={back} alt="" onClick={saturnBack} className={classes.btn}/>
+                <img src={next} alt="" onClick={saturnNext} className={classes.btn}/>
             </div>
 
         </div>
