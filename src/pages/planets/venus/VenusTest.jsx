@@ -1,19 +1,18 @@
-import React, {useEffect} from 'react';
-import classes from "../sun/sunTest.module.css";
+import React from 'react';
+import classes from './venusTest.module.css'
 import PlanetQuestion from "../../../components/planetQuestion/PlanetQuestion";
-import photo3 from "../../../img/3photo(new).jpg";
+import photo5 from "../../../img/5photo(new).jpg";
 
-const SunTest = ({questions, setAnswers, visible}) => {
-
+const VenusTest = ({questions, setAnswers, visible}) => {
     const rootClasses = [classes.container]
     if(visible) rootClasses.push(classes.active)
 
     return (
         <div className={rootClasses.join(' ')}>
-            {/*<img className={classes.image} src={photo3} alt=""/>*/}
+            {/*<img className={classes.image} src={photo5} alt=""/>*/}
 
-            <div className={classes.title} id={'test2'}>
-                <h1>Диагностика Солнца</h1>
+            <div className={classes.title}>
+                <h1>Диагностика Венеры</h1>
             </div>
 
             {
@@ -26,4 +25,4 @@ const SunTest = ({questions, setAnswers, visible}) => {
     );
 };
 
-export default SunTest;
+export default VenusTest;
