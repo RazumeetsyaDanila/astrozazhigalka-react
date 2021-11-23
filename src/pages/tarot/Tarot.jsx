@@ -174,7 +174,7 @@ const Tarot = () => {
                                 fontFamily: "'Neucha', cursive",
                                 fontSize: 24,
                                 marginBottom: 4
-                            }}>Результат: {'\n'}</p>
+                            }}>Заявка на расклад таро: {'\n'}</p>
                             {
                                 state.map(item => (
                                     <p style={{

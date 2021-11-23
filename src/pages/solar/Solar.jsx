@@ -1,9 +1,14 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import classes from './solar.module.css'
 import LinkBtn from "../../components/UI/linkBtn/LinkBtn";
 import instaImg from "../../img/instagram(min).png";
 
 const Solar = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     return (
         <div className={classes.container}>
             <div className={classes.title}>

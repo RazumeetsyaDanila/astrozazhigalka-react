@@ -8,6 +8,7 @@ import NatalChild from "./pages/natal_child/NatalChild";
 import './styles/app.css'
 import Rectification from "./pages/rectification/Rectification";
 import Tarot from "./pages/tarot/Tarot";
+import MainPlanets from "./pages/planets/mainPlanets/MainPlanets";
 
 function App() {
     return (
@@ -20,6 +21,7 @@ function App() {
                 <Route path="/natal_child" element={<NatalChild/>} />
                 <Route path="/rectification" element={<Rectification/>} />
                 <Route path="/tarot" element={<Tarot/>} />
+                <Route path="/planets" element={<MainPlanets/>} />
             </Routes>
         </BrowserRouter>
     );

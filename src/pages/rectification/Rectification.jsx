@@ -19,7 +19,6 @@ const Rectification = () => {
         window.scrollTo(0, 0)
     }, [])
 
-    let radioRefs = useRef([])
     let refs = useRef([])
     let answers = []
     let doneFullAnswers = []

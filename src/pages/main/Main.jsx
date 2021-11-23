@@ -1,9 +1,14 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import InfoCard from "../../components/UI/infoCard/InfoCard";
 import TestCard from "../../components/UI/testCard/TestCard";
 import classes from './main.module.css'
 
 function Main() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     return (
         <div className="container">
             <div className={classes.Main}>
@@ -44,7 +49,7 @@ function Main() {
                     <TestCard
                         title={"Диагностика планет"}
                         description={"Для проведения диагностики, необходимо ответить на все вопросы. После прохождения теста скопируйте результат или сделайте скриншот и отправьте его сообщением в любом удобном вам месседжере. "}
-                        path={"test"}
+                        path={"planets"}
                     />
                     <TestCard
                         title={"Заявка на расклад таро"}

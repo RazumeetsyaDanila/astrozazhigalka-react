@@ -1,9 +1,14 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import classes from './natalAnalysis.module.css'
 import LinkBtn from "../../components/UI/linkBtn/LinkBtn";
 import instaImg from "../../img/instagram(min).png";
 
 const NatalAnalysis = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     return (
         <div className={classes.container}>
             <div className={classes.title}>
