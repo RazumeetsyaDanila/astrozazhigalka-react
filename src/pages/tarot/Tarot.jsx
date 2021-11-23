@@ -172,7 +172,7 @@ const Tarot = () => {
                             <p style={{
                                 textAlign: 'center',
                                 fontFamily: "'Neucha', cursive",
-                                fontSize: 24,
+                                fontSize: 26,
                                 marginBottom: 4
                             }}>Заявка на расклад таро: {'\n'}</p>
                             {
@@ -180,7 +180,8 @@ const Tarot = () => {
                                     <p style={{
                                         textAlign: 'center',
                                         fontFamily: "'Scada', sans-serif",
-                                        paddingBottom: 4
+                                        paddingBottom: 4,
+                                        fontSize: 18
                                     }}>
                                         {item + '\n'}
                                     </p>
