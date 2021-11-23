@@ -5,3 +5,34 @@
     margin-top: 20px;
     margin-bottom: 40px;
 }
+
+.insta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Scada', sans-serif;
+}
+
+.insta img{
+    width: 28px;
+    height: 28px;
+}
+
+
+.copyArea{
+    border: 1px solid #adb5bd;
+    border-radius: 4px;
+    margin: 6px 6px 14px 6px;
+}
+
+.copyArea > div{
+    padding: 6px;
+}
+
+.closeBtn{
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    cursor: pointer;
+
+}
