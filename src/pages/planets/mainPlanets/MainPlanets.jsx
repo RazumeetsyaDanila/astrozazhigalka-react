@@ -23,13 +23,17 @@ const MainPlanets = () => {
     // let answersArr = new Array(7).fill(2).map(el => new Array(20).fill(2));
 
     let sumAnswers = [0, 0, 0, 0, 0, 0, 0]
-    const [moonTestVisible, setMoonTestVisible] = useState(false)
+    const [moonTestVisible, setMoonTestVisible] = useState(true)
     const [sunTestVisible, setSunTestVisible] = useState(false)
     const [saturnTestVisible, setSaturnTestVisible] = useState(false)
     const [venusTestVisible, setVenusTestVisible] = useState(false)
     const [mercuryTestVisible, setMercuryTestVisible] = useState(false)
     const [marsTestVisible, setMarsTestVisible] = useState(false)
     const [jupiterTestVisible, setJupiterTestVisible] = useState(false)
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [moonTestVisible, sunTestVisible, saturnTestVisible, venusTestVisible, mercuryTestVisible, marsTestVisible, jupiterTestVisible])
 
     const [moonState, setMoonState] = useState(new Array(20).fill(2))
     const [sunState, setSunState] = useState(new Array(20).fill(2))
@@ -95,27 +99,87 @@ const MainPlanets = () => {
         setCopyBtnText('Результат скопирован!')
     }
 
+    const moonNext = () => {
+        setMoonTestVisible(false)
+        setSunTestVisible(true)
+    }
+
+    const sunNext = () => {
+        setSunTestVisible(false)
+        setSaturnTestVisible(true)
+    }
+
+    const sunBack = () => {
+        setSunTestVisible(false)
+        setMoonTestVisible(true)
+    }
+
+    const saturnNext = () => {
+        setSaturnTestVisible(false)
+        setVenusTestVisible(true)
+    }
+
+    const saturnBack = () => {
+        setSaturnTestVisible(false)
+        setSunTestVisible(true)
+    }
+
+    const venusNext = () => {
+        setVenusTestVisible(false)
+        setMercuryTestVisible(true)
+    }
+
+    const venusBack = () => {
+        setVenusTestVisible(false)
+        setSaturnTestVisible(true)
+    }
+
+    const mercuryNext = () => {
+        setMercuryTestVisible(false)
+        setMarsTestVisible(true)
+    }
+
+    const mercuryBack = () => {
+        setMercuryTestVisible(false)
+        setVenusTestVisible(true)
+    }
+
+    const marsNext = () => {
+        setMarsTestVisible(false)
+        setJupiterTestVisible(true)
+    }
+
+    const marsBack = () => {
+        setMarsTestVisible(false)
+        setMercuryTestVisible(true)
+    }
+
+    const jupiterBack = () => {
+        setJupiterTestVisible(false)
+        setMarsTestVisible(true)
+    }
+
     return (
         <div className={classes.container}>
-            <Button text={'Moon'} func={() => setMoonTestVisible(!moonTestVisible)} style={{marginTop: 10}}/>
-            <Button text={'Sun'} func={() => setSunTestVisible(!sunTestVisible)} style={{marginTop: 10}}/>
-            <Button text={'Saturn'} func={() => setSaturnTestVisible(!saturnTestVisible)} style={{marginTop: 10}}/>
-            <Button text={'Venus'} func={() => setVenusTestVisible(!venusTestVisible)} style={{marginTop: 10}}/>
-            <Button text={'Mercury'} func={() => setMercuryTestVisible(!mercuryTestVisible)} style={{marginTop: 10}}/>
-            <Button text={'Mars'} func={() => setMarsTestVisible(!marsTestVisible)} style={{marginTop: 10}}/>
-            <Button text={'Jupiter'} func={() => setJupiterTestVisible(!jupiterTestVisible)} style={{marginTop: 10}}/>
+            {/*<Button text={'Moon'} func={() => setMoonTestVisible(!moonTestVisible)} style={{marginTop: 10}}/>*/}
+            {/*<Button text={'Sun'} func={() => setSunTestVisible(!sunTestVisible)} style={{marginTop: 10}}/>*/}
+            {/*<Button text={'Saturn'} func={() => setSaturnTestVisible(!saturnTestVisible)} style={{marginTop: 10}}/>*/}
+            {/*<Button text={'Venus'} func={() => setVenusTestVisible(!venusTestVisible)} style={{marginTop: 10}}/>*/}
+            {/*<Button text={'Mercury'} func={() => setMercuryTestVisible(!mercuryTestVisible)} style={{marginTop: 10}}/>*/}
+            {/*<Button text={'Mars'} func={() => setMarsTestVisible(!marsTestVisible)} style={{marginTop: 10}}/>*/}
+            {/*<Button text={'Jupiter'} func={() => setJupiterTestVisible(!jupiterTestVisible)} style={{marginTop: 10}}/>*/}
 
-            <MoonTest questions={question.slice(0, 20)} visible={moonTestVisible} setAnswers={setMoonAnswers}/>
-            <SunTest questions={question.slice(20, 40)} visible={sunTestVisible} setAnswers={setSunAnswers}/>
-            <SaturnTest questions={question.slice(40, 60)} visible={saturnTestVisible} setAnswers={setSaturnAnswers}/>
-            <VenusTest questions={question.slice(60, 80)} visible={venusTestVisible} setAnswers={setVenusAnswers}/>
+            <MoonTest questions={question.slice(0, 20)} visible={moonTestVisible} setAnswers={setMoonAnswers} moonNext={moonNext}/>
+            <SunTest questions={question.slice(20, 40)} visible={sunTestVisible} setAnswers={setSunAnswers} sunNext={sunNext} sunBack={sunBack}/>
+            <SaturnTest questions={question.slice(40, 60)} visible={saturnTestVisible} setAnswers={setSaturnAnswers} saturnNext={saturnNext} saturnBack={saturnBack}/>
+            <VenusTest questions={question.slice(60, 80)} visible={venusTestVisible} setAnswers={setVenusAnswers} venusNext={venusNext} venusBack={venusBack}/>
             <MercuryTest questions={question.slice(80, 100)} visible={mercuryTestVisible}
-                         setAnswers={setMercuryAnswers}/>
-            <MarsTest questions={question.slice(100, 120)} visible={marsTestVisible} setAnswers={setMarsAnswers}/>
+                         setAnswers={setMercuryAnswers} mercuryNext={mercuryNext} mercuryBack={mercuryBack}/>
+            <MarsTest questions={question.slice(100, 120)} visible={marsTestVisible} setAnswers={setMarsAnswers} marsNext={marsNext} marsBack={marsBack}/>
             <JupiterTest questions={question.slice(120, 140)} visible={jupiterTestVisible}
-                         setAnswers={setJupiterAnswers}/>
+                         setAnswers={setJupiterAnswers} jupiterBack={jupiterBack} result={result}/>
 
-            <Button text={'Посчитать результат'} func={result} style={{marginTop: 10}}/>
+            {/*<Button text={'Посчитать результат'} func={result} />*/}
 
             <Modal visible={modal} setVisible={setModal}>
                 <div>
