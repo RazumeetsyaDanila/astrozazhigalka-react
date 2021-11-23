@@ -118,10 +118,6 @@ const Rectification = () => {
                 </div>
             </div>
 
-            {/*{questions_2_7.map(item => (*/}
-            {/*    <AgeQuestion key={item.question} ref={refs} question_name={item.question} />*/}
-            {/*))}*/}
-
             {questions_2_7.map(item => (
                 <div className={classes.ageQuestionBox}>
                     <p>Вопрос {questions_2_7.indexOf(item) + 2}</p>
