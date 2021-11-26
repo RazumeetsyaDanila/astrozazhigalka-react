@@ -4,7 +4,7 @@
     align-items: center;
     height: 100vh;
     justify-content: center;
-    color: white;
+    color: #d2d2d2;
 
 }
 
@@ -21,7 +21,7 @@
     background-color: #00001d;
     width: 40vw;
     padding: 20px;
-    font-family: 'Scada', sans-serif;
+    font-family: 'Overpass', sans-serif;
     margin-bottom: 20px;
 }
 
