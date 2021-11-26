@@ -33,7 +33,7 @@ input[type=radio]{
     margin-top: 20px;
     margin-bottom: 20px;
     position: relative;
-    color: white;
+    color: #d2d2d2;
 }
 
 
@@ -49,7 +49,7 @@ input[type=radio]{
     background-color: #00001d;
     width: 30vw;
     padding: 12px;
-    font-family: 'Scada', sans-serif;
+    font-family: 'Overpass', sans-serif;
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;

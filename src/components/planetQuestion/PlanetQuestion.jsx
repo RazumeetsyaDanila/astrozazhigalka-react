@@ -11,9 +11,9 @@ const PlanetQuestion = ({questionText, questionId, radioGroup, setAnswers}) => {
 
     return (
         <div className={classes.questionBox}>
-            <p style={{margin: '2px 0 6px 0', color: '#ffffff'}} >Вопрос {questionId+1}</p>
+            <p style={{margin: '2px 0 6px 0', color: '#d2d2d2'}} >Вопрос {questionId+1}</p>
             <hr style={{color: '#ee46a9'}}/>
-            <p style={{margin: '6px 0 6px 0', textAlign: 'center', color: '#ffffff'}}>{questionText}</p>
+            <p style={{margin: '6px 0 6px 0', textAlign: 'center', color: '#d2d2d2'}}>{questionText}</p>
             <div style={{display: "flex", margin: '6px 0 6px 0'}}>
                 <Radio label={'Да'} id={radioGroup+'1'} group={radioGroup} blockStyle={{marginRight: 10}} onClick={setYes}/>
                 <Radio label={'Нет'} id={radioGroup+'2'} group={radioGroup} blockStyle={{marginRight: 10}} onClick={setNo}/>
